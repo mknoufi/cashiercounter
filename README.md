@@ -1,3 +1,3 @@
-# cashiercounter
+# Cashier Counter
 
-This is the Cashier Counter module for ERPNext.
+Custom cashier module for ERPNext.
