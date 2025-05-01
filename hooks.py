@@ -1,0 +1,6 @@
+app_name = "cashiercounter"
+app_title = "Cashier Counter"
+app_publisher = "Your Name"
+app_description = "Custom cashier module for ERPNext"
+app_email = "your@email.com"
+app_license = "MIT"
