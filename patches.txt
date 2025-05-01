@@ -1,0 +1,3 @@
+git add .
+git commit -m "Added missing hooks.py and patches.txt"
+git push origin main
