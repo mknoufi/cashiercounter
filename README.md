@@ -1,2 +1,3 @@
-# cashiercounter
-cashier counter process for our own usage
+# Cashier Counter
+
+Custom cashier module for ERPNext.
