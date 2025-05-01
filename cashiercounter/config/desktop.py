@@ -1,0 +1,6 @@
+app_name = "cashiercounter"
+app_title = "Cashier Counter"
+app_icon = "octicon octicon-file-directory"
+app_color = "grey"
+app_email = "your@email.com"
+app_license = "MIT"
