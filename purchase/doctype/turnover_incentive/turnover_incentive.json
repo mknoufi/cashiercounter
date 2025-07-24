@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:scheme_name",
+ "creation": "2024-07-24 03:15:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "scheme_name",
+  "description",
+  "column_break_3",
+  "is_active",
+  "valid_from",
+  "valid_to",
+  "section_break_7",
+  "min_turnover",
+  "incentive_percentage",
+  "column_break_10",
+  "max_incentive_amount",
+  "calculation_period"
+ ],
+ "fields": [
+  {
+   "fieldname": "scheme_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Scheme Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": 1,
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "label": "Valid From"
+  },
+  {
+   "fieldname": "valid_to",
+   "fieldtype": "Date",
+   "label": "Valid To"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Incentive Details"
+  },
+  {
+   "fieldname": "min_turnover",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Minimum Turnover",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incentive_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Incentive Percentage",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "max_incentive_amount",
+   "fieldtype": "Currency",
+   "label": "Maximum Incentive Amount"
+  },
+  {
+   "default": "Yearly",
+   "fieldname": "calculation_period",
+   "fieldtype": "Select",
+   "label": "Calculation Period",
+   "options": "Monthly\nQuarterly\nYearly"
+  }
+ ],
+ "links": [],
+ "modified": "2024-07-24 03:15:00.000000",
+ "modified_by": "Administrator",
+ "module": "Purchase",
+ "name": "Turnover Incentive",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Purchase Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Purchase User"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
