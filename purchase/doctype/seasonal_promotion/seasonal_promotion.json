@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:promotion_name",
+ "creation": "2024-07-24 03:15:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "promotion_name",
+  "description",
+  "column_break_3",
+  "is_active",
+  "start_date",
+  "end_date",
+  "section_break_7",
+  "discount_percentage",
+  "max_discount_amount",
+  "column_break_10",
+  "applies_to",
+  "supplier_list",
+  "section_break_13",
+  "applicable_items"
+ ],
+ "fields": [
+  {
+   "fieldname": "promotion_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Promotion Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": 1,
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Discount Details"
+  },
+  {
+   "fieldname": "discount_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Discount Percentage",
+   "reqd": 1
+  },
+  {
+   "fieldname": "max_discount_amount",
+   "fieldtype": "Currency",
+   "label": "Maximum Discount Amount"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "All Suppliers",
+   "fieldname": "applies_to",
+   "fieldtype": "Select",
+   "label": "Applies To",
+   "options": "All Suppliers\nSpecific Suppliers"
+  },
+  {
+   "depends_on": "eval:doc.applies_to==\"Specific Suppliers\"",
+   "fieldname": "supplier_list",
+   "fieldtype": "Table",
+   "label": "Applicable Suppliers",
+   "options": "Seasonal Promotion Supplier"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break",
+   "label": "Applicable Items"
+  },
+  {
+   "fieldname": "applicable_items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Seasonal Promotion Item"
+  }
+ ],
+ "links": [],
+ "modified": "2024-07-24 03:15:00.000000",
+ "modified_by": "Administrator",
+ "module": "Purchase",
+ "name": "Seasonal Promotion",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Purchase Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Purchase User"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

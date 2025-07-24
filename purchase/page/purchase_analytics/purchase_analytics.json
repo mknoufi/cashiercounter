@@ -1,0 +1,23 @@
+{
+ "creation": "2024-07-24 03:15:00.000000",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2024-07-24 03:15:00.000000",
+ "modified_by": "Administrator",
+ "module": "Purchase",
+ "name": "purchase-analytics",
+ "owner": "Administrator",
+ "page_name": "purchase-analytics",
+ "roles": [
+  {
+   "role": "Purchase Manager"
+  },
+  {
+   "role": "Purchase User"
+  }
+ ],
+ "standard": "Yes",
+ "system_page": 0,
+ "title": "Purchase Analytics"
+}

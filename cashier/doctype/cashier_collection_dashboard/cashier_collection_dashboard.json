@@ -1,0 +1,41 @@
+{
+  "doctype": "DocType",
+  "name": "Cashier Collection Dashboard",
+  "module": "Cashier Counter",
+  "custom": 1,
+  "fields": [
+    {
+      "label": "Total Amount",
+      "fieldname": "total_amount",
+      "fieldtype": "Currency",
+      "read_only": 1
+    },
+    {
+      "label": "Invoice Count",
+      "fieldname": "invoice_count",
+      "fieldtype": "Int",
+      "read_only": 1
+    },
+    {
+      "label": "Total Discount",
+      "fieldname": "total_discount",
+      "fieldtype": "Currency",
+      "read_only": 1
+    },
+    {
+      "label": "Mode Breakdown",
+      "fieldname": "mode_breakdown",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

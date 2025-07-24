@@ -1,0 +1,7 @@
+{
+  "doctype": "Page",
+  "title": "Cashier Collection Dashboard",
+  "name": "cashier_collection_dashboard",
+  "module": "Cashier",
+  "type": "page"
+}
