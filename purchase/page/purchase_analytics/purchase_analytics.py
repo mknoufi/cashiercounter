@@ -10,16 +10,27 @@ def get_analytics_data():
     
     # This would typically fetch data from the database
     # For now, returning sample data structure
+    # Fetch monthly purchase data
+    monthly_purchase = frappe.db.sql("""
+        SELECT SUM(total_amount) AS total_amount, COUNT(name) AS invoice_count, AVG(total_amount) AS avg_amount
+        FROM `tabPurchase Invoice`
+        WHERE MONTH(posting_date) = MONTH(CURDATE()) AND YEAR(posting_date) = YEAR(CURDATE())
+    """, as_dict=True)[0]
+
+    # Fetch active promotions count
+    active_promotions = frappe.db.count("Promotion", filters={"status": "Active"})
+
+    # Fetch top suppliers
+    top_suppliers = frappe.db.sql("""
+        SELECT supplier, SUM(total_amount) AS total_amount, COUNT(name) AS invoice_count
+        FROM `tabPurchase Invoice`
+        GROUP BY supplier
+        ORDER BY total_amount DESC
+        LIMIT 3
+    """, as_dict=True)
+
     return {
-        "monthly_purchase": {
-            "total_amount": 150000,
-            "invoice_count": 45,
-            "avg_amount": 3333
-        },
-        "active_promotions": 3,
-        "top_suppliers": [
-            {"supplier": "ABC Suppliers", "total_amount": 50000, "invoice_count": 15},
-            {"supplier": "XYZ Trading", "total_amount": 30000, "invoice_count": 8},
-            {"supplier": "Global Mart", "total_amount": 25000, "invoice_count": 12}
-        ]
+        "monthly_purchase": monthly_purchase,
+        "active_promotions": active_promotions,
+        "top_suppliers": top_suppliers
     }
