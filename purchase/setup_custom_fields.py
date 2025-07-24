@@ -154,7 +154,7 @@ def execute():
     # Create the custom fields
     create_custom_fields(all_custom_fields, update=True)
     
-    print("Custom fields created successfully for purchase customizations")
+    frappe.logger().info("Custom fields created successfully for purchase customizations")
 
 
 if __name__ == "__main__":
